@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-left-section">
+            <img src="image/3.png" alt="Profile" class="nav-profile-pic">
+            <p class="nav-profile-name">Your Name</p>
+            
+        </div>
+        <div class="nav-center-section">
+            <h2>Chatbox</h2>
+        </div>
+        <div class="nav-right-section">
+            <div class="nav-hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <div class="nav-dropdown-menu" id="nav-dropdown">
+                <a href="#" onclick="createGroup()">Create Group</a>
+                <a href="#" onclick="openSettings()">Settings</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="navbar.js"></script>
+</body>
+</html>

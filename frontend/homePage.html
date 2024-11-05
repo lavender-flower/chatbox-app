@@ -9,8 +9,31 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="navbar.css">
 </head>
 <body class="poppins-thin bg-light">
+    <nav class="navbar">
+        <div class="nav-left-section">
+            <img src="image/3.png" alt="Profile" class="nav-profile-pic">
+            <p class="nav-profile-name">Your Name</p>
+            
+        </div>
+        <div class="nav-center-section">
+            <h2>Chatbox</h2>
+        </div>
+        <div class="nav-right-section">
+            <div class="nav-hamburger-menu" onclick="toggleMenu()">
+                &#9776;
+            </div>
+            <div class="nav-dropdown-menu" id="nav-dropdown">
+                <a href="#" onclick="createGroup()">Create Group</a>
+                <a href="#" onclick="openSettings()">Settings</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+    </nav> 
     <div class="  ">
   
         <div class="row align-items-start">
@@ -114,5 +137,7 @@
           
           </div>
     </div>
+
+    <script src="navbar.js"></script>
 </body>
 </html>
