@@ -4,7 +4,7 @@ body {
 }
 .poppins-thin {
   font-family: 'Poppins', sans-serif;
-  font-weight: 100;
+  font-weight: 400;
   font-style: normal;
 }
 .landingPage-img {
@@ -50,6 +50,7 @@ body {
   display: flex;
   justify-content: center;
   color: #295f98;
+  margin-top: 2rem;
 }
 .register-container small {
   display: flex;
@@ -74,9 +75,9 @@ body {
 }
 #regBody {
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  min-height: 100vh; /* Full viewport height */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   margin: 0;
 }
 .regiconWrapper {
@@ -89,4 +90,14 @@ body {
   transform: translateY(-50%);
   cursor: pointer;
   color: #666;
+}
+.reg-passlink {
+  display: flex;
+  justify-content: flex-end;
+}
+.form-control::placeholder {
+  color: #888888; /* Change placeholder text color */
+  font-weight: 500; /* Change font weight */
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.8; /* Make placeholder fully opaque */
 }
