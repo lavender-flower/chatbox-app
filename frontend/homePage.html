@@ -29,12 +29,101 @@
                 &#9776;
             </div>
             <div class="nav-dropdown-menu" id="nav-dropdown">
-                <a href="#" onclick="createGroup()">Create Group</a>
+                <a href="#" id="myBtn" onclick="">Create group</a>
+                
+           
+
+                <!-- The Modal -->
+                <div id="myModal" class="modal">
+                
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                   <div class="text-end">
+                    <span class="close ">&times;</span>
+                   </div>
+
+                <div>
+                    <div class="homeiconWrapper">
+                        <input
+                          type="text"
+                          class="form-control shadow"
+                          id="exampleFormControlInput4"
+                          placeholder="Search"
+                          
+                        />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </div>
+<div>
+
+    
+    <div class="d-flex justify-content-between pt-1 mt-4 border">
+        <div class="d-flex">
+         <div class="ps-2" >
+             <img src="./image/3.png" width="70px">
+
+         </div>
+         <div class=" pt-3 ps-3">
+             <h4>Mr Allen</h4>
+             
+             </div>
+        </div>
+         <div class="pt-3 pe-5">
+             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" unchecked>
+         </div>
+
+     </div>
+     <div class="d-flex justify-content-between pt-1 mt-4 border">
+         <div class="d-flex">
+          <div class="ps-2" >
+              <img src="./image/2.png" width="70px">
+
+          </div>
+          <div class=" pt-3 ps-3">
+              <h4>Mr Allen</h4>
+              
+              </div>
+         </div>
+          <div class="pt-3 pe-5">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" unchecked>
+          </div>
+
+      </div>
+      <div class="d-flex justify-content-between pt-1 mt-4 border">
+         <div class="d-flex">
+          <div class="ps-2" >
+              <img src="./image/1.png" width="70px">
+
+          </div>
+          <div class=" pt-3 ps-3">
+              <h4>Mr Allen</h4>
+              
+              </div>
+         </div>
+          <div class="pt-3 pe-5">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" unchecked>
+          </div>
+
+      </div>
+</div>
+<div class="text-end">
+    <button type="button" class="groupCustom-btn shadow">create Group</button>
+    
+</div>
+
+
+                </div>
+                  </div>
+                
+                </div>
+               
+               
                 <a href="#" onclick="openSettings()">Settings</a>
                 <a href="#" onclick="logout()">Logout</a>
             </div>
         </div>
     </nav> 
+
+   
     <div class="  ">
   
         <div class="row align-items-start">
@@ -44,7 +133,7 @@
               <div class="homeiconWrapper">
                 <input
                   type="text"
-                  class="form-control  shadow"
+                  class="form-control shadow"
                   id="exampleFormControlInput4"
                   placeholder="Search"
                   
@@ -148,5 +237,32 @@
     </div>
 
     <script src="navbar.js"></script>
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
 </body>
 </html>
