@@ -1,58 +1,54 @@
 body {
-    background-color: #295F98;
-    
-  }
-  .poppins-thin {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
- 
-
-/* CSS */
+  background-color: #f8f9fa; /* Light background for the entire page */
+}
+.poppins-thin {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .chat-container {
-    background-color: #f0f0f0; /* Background color for the chat container */
+  height: 80vh; /* Set height for chat area */
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+  overflow: hidden;
 }
-
-.other-name {
-    margin-left: 20px;
-    font-size: 1.1em;
-    font-weight: bold;
-    color:black;
+.messages {
+  flex-grow: 1;
+  overflow-y: auto; /* Enable vertical scroll */
+  padding: 10px;
 }
-
-.other-chat {
-    background-color: #f8d7da;
-    padding: 20px;
-    display: flex;
-    align-items: center
-  }
-
-  .my-chat {
-    background-color: #d4edda;
-    padding: 20px;
-    text-align: right; /* Align text to the right */
-    margin-right: 0;
-    
-    
-
-    display: flex;
-    align-items: center
-     /* Set right margin to 0px */
-  }
-/* Text Container Styling */
-.txt-container {
-    background-color: white;
-    padding: 5px 5px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+.my-message {
+  background-color: #d9d9d9; /* Background for my messages */
+  text-align: right; /* Align my messages to the right */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-
-.image img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 50%; /* Makes the image circular */
+.other-message {
+  background-color: #295f98; /* Background for other messages */
+  color: white; /* White text for other messages */
+  text-align: left; /* Align other messages to the left */
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
-
-
+.input-area {
+  padding: 10px;
+  background-color: white; /* Input area background */
+}
+.input-area input {
+  border: 1px solid #ced4da;
+  border-radius: 12px;
+  padding: 10px;
+  flex-grow: 1; /* Allow input to grow */
+  margin-right: 10px;
+}
+img {
+  height: 40px;
+  width: 40px;
+}
+.container p {
+  font-weight: 800;
+}
