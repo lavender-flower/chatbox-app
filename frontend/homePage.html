@@ -13,12 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="private.css" />
 </head>
 <body class="poppins-thin bg-light">
     <nav class="navbar">
         <div class="nav-left-section">
-            <img src="image/3.png" alt="Profile" class="nav-profile-pic">
-            <p class="nav-profile-name pt-3">Your Name</p>
+            <img src="image/1.png" alt="Profile" class="nav-profile-pic">
+            <p class="nav-profile-name pt-3">Boby</p>
             
         </div>
         <div class="nav-center-section">
@@ -59,11 +60,11 @@
     <div class="d-flex justify-content-between pt-1 mt-4 border">
         <div class="d-flex">
          <div class="ps-2" >
-             <img src="./image/3.png" width="70px">
+             <img src="./image/6.png" width="70px">
 
          </div>
          <div class=" pt-3 ps-3">
-             <h4>Mr Allen</h4>
+             <h4>Amelia</h4>
              
              </div>
         </div>
@@ -75,11 +76,11 @@
      <div class="d-flex justify-content-between pt-1 mt-4 border">
          <div class="d-flex">
           <div class="ps-2" >
-              <img src="./image/2.png" width="70px">
+              <img src="./image/3.png" width="70px">
 
           </div>
           <div class=" pt-3 ps-3">
-              <h4>Mr Allen</h4>
+              <h4>Alice Smith</h4>
               
               </div>
          </div>
@@ -91,11 +92,11 @@
       <div class="d-flex justify-content-between pt-1 mt-4 border">
          <div class="d-flex">
           <div class="ps-2" >
-              <img src="./image/1.png" width="70px">
+              <img src="./image/2.png" width="70px">
 
           </div>
           <div class=" pt-3 ps-3">
-              <h4>Mr Allen</h4>
+              <h4>Mrs Allen</h4>
               
               </div>
          </div>
@@ -145,11 +146,11 @@
                
                 <div class="d-flex pt-1  mt-4  border">
                     <div >
-                        <img src="./image/1.png" width="70px">
+                        <img src="./image/2.png" width="70px">
 
                     </div>
                     <div class=" pt-2 ps-3">
-                        <h6>Mr Allen</h6>
+                        <h6 onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');">Mrs Allen</h6>
                         
                         <small>What's up!</small>
 
@@ -166,7 +167,7 @@
 
                     </div>
                     <div class=" pt-2 ps-3">
-                        <h6>Mr Allen</h6>
+                        <h6>Alice Smith</h6>
                         
                         <small>What's up!</small>
 
@@ -183,7 +184,7 @@
 
                     </div>
                     <div class=" pt-2 ps-3">
-                        <h6>Mr Allen</h6>
+                        <h6>Emma</h6>
                         
                         <small>What's up!</small>
 
@@ -199,7 +200,7 @@
 
                     </div>
                     <div class=" pt-2 ps-3">
-                        <h6>lCT Group</h6>
+                        <h6 onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" >lCT Group</h6>
                         
                         <small>What's up!</small>
 
@@ -211,11 +212,11 @@
                 </div>
                 <div class="d-flex pt-1 mt-4 border">
                     <div>
-                        <img src="./image/1.png" width="70px">
+                        <img src="./image/7.png" width="70px" class="rounded-circle">
 
                     </div>
                     <div class=" pt-2 ps-3">
-                        <h6>Mr Allen</h6>
+                        <h6>Tom</h6>
                         
                         <small>What's up!</small>
 
@@ -228,17 +229,218 @@
                 
             </div>
             </div>
-            <div class="col-8 home-bg-2">
+            <div id="home" class="col-8 home-bg-2">
               <div >
                 <img class="p-5 " width="300px" src="./image/4.png"><br>
                 <small class="ps-5">Select a chat to read message</small>
               </div>
             </div>
+
+            <div id="private" class="col-8 home-bg-2" style="display: none;">
+                <div >
+                  
+                    <div class="container mt-5">
+                        <p>Mrs Allen</p>
+                        <div class="chat-container">
+                          <div class="messages">
+                            <!-- Other user's message -->
+                            <div class="d-flex">
+                              <div class="image me-2">
+                                <img
+                                  src="image/2.png"
+                                  alt="User Image"
+                                  width="40"
+                                  class="img-fluid rounded-circle"
+                                  id="image"
+                                />
+                              </div>
+                              <div class="other-message">Hey, how are you?</div>
+                            </div>
+                            <!-- My message -->
+                            <div class="d-flex justify-content-end">
+                              <div class="my-message">I'm good, thanks! How about you?</div>
+                              <div class="image ms-2">
+                                <img
+                                  src="image/1.png"
+                                  alt="My Image"
+                                  class="img-fluid rounded-circle"
+                                  id="image"
+                                />
+                              </div>
+                            </div>
+                            <!-- Other user's message -->
+                            <div class="d-flex">
+                              <div class="image me-2">
+                                <img
+                                  src="image/2.png"
+                                  alt="User Image"
+                                  class="img-fluid rounded-circle"
+                                  id="image"
+                                />
+                              </div>
+                              <div class="other-message">Just working on some projects.</div>
+                            </div>
+                            <!-- My message -->
+                            <div class="d-flex justify-content-end">
+                              <div class="my-message">Sounds great!</div>
+                              <div class="image ms-2">
+                                <img
+                                  src="image/1.png"
+                                  alt="My Image"
+                                  class="img-fluid rounded-circle"
+                                  id="image"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-area d-flex">
+                            <input
+                              type="text"
+                              placeholder="Type your message..."
+                              aria-label="Message input"
+                            />
+                            <button class="btn btn-primary" type="button">
+                              <i class="fas fa-paper-plane"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+
+              <div id="public" class="col-8 home-bg-2" style="display: none;">
+                <div >
+                    <div class="container mt-5">
+                        <p>LCT Intern</p>
+                        <div class="chat-container">
+                          <div class="messages">
+                            <!-- Other user's message -->
+                            <div class="d-flex flex-column mb-2">
+                              <span class="fw-light ps-5">Mrs Allen</span>
+                  
+                              <div class="d-flex">
+                                <div class="image me-2">
+                                  <img
+                                    src="image/2.png"
+                                    alt="User Image"
+                                    class="img-fluid rounded-circle"
+                                    id="image"
+                                  />
+                                </div>
+                                <div class="other-message">Hey, how are you?</div>
+                              </div>
+                            </div>
+                  
+                            <div class="d-flex flex-column mb-2">
+                              <span class="fw-light ps-5">Alice Smith</span>
+                  
+                              <div class="d-flex">
+                                <div class="image me-2">
+                                  <img
+                                    src="image/3.png"
+                                    alt="User Image"
+                                    class="img-fluid rounded-circle"
+                                    id="image"
+                                  />
+                                </div>
+                                <div class="other-message">Hey, how are you?</div>
+                              </div>
+                            </div>
+                  
+                            <div class="d-flex flex-column mb-2">
+                              <span class="fw-light ps-5">Mrs Allen</span>
+                  
+                              <div class="d-flex">
+                                <div class="image me-2">
+                                  <img
+                                    src="image/2.png"
+                                    alt="User Image"
+                                    class="img-fluid rounded-circle"
+                                    id="image"
+                                  />
+                                </div>
+                                <div class="other-message">Just working on some projects.</div>
+                              </div>
+                            </div>
+                            <!-- My message -->
+                            <div class="d-flex justify-content-end mb-2">
+                              <div class="my-message">I'm good, thanks! How about you?</div>
+                              <div class="image ms-2">
+                                <img
+                                  src="image/1.png"
+                                  alt="My Image"
+                                  class="img-fluid rounded-circle"
+                                  id="image"
+                                />
+                              </div>
+                            </div>
+                            <!-- Other user's message -->
+                            <div class="d-flex flex-column mb-2">
+                              <span class="fw-light ps-5">Mrs Allen</span>
+                  
+                              <div class="d-flex">
+                                <div class="image me-2">
+                                  <img
+                                    src="image/2.png"
+                                    alt="User Image"
+                                    class="img-fluid rounded-circle"
+                                    id="image"
+                                  />
+                                </div>
+                                <div class="other-message">Just working on some projects.</div>
+                              </div>
+                            </div>
+                  
+                            <div class="d-flex flex-column mb-2">
+                              <span class="fw-light ps-5">Mrs Allen</span>
+                  
+                              <div class="d-flex">
+                                <div class="image me-2">
+                                  <img
+                                    src="image/2.png"
+                                    alt="User Image"
+                                    class="img-fluid rounded-circle"
+                                    id="image"
+                                  />
+                                </div>
+                                <div class="other-message">Hey, how are you?</div>
+                              </div>
+                            </div>
+                  
+                            <div class="d-flex justify-content-end mb-2">
+                              <div class="my-message">Sounds great!</div>
+                              <div class="image ms-2">
+                                <img
+                                  src="image/1.png"
+                                  alt="My Image"
+                                  class="img-fluid rounded-circle"
+                                  id="image"
+                                />
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-area d-flex">
+                            <input
+                              type="text"
+                              placeholder="Type your message..."
+                              aria-label="Message input"
+                            />
+                            <button class="btn btn-primary" type="button">
+                              <i class="fas fa-paper-plane"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                  
+                </div>
+              </div>
           
           </div>
     </div>
 
     <script src="navbar.js"></script>
+    <script src="route.js"></script>
+
     <script>
         // Get the modal
         var modal = document.getElementById("myModal");
