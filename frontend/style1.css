@@ -35,3 +35,58 @@ body {
   margin: 0.5rem 0 0.5rem 0;
   color: #295f98;
 }
+.register-container {
+  height: 38rem;
+  width: 25rem;
+  background: #d9d9d9;
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.register-container h1 {
+  display: flex;
+  justify-content: center;
+  color: #295f98;
+}
+.register-container small {
+  display: flex;
+  justify-content: center;
+  color: #000;
+  margin-bottom: 2rem;
+}
+.regCustom-btn {
+  background: #295f98;
+  width: 21rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  margin-top: 1rem;
+}
+.register-container a {
+  text-decoration: none;
+}
+.reg-smallanc {
+  margin-top: 1rem;
+}
+#regBody {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0;
+}
+.regiconWrapper {
+  position: relative;
+}
+.fa-solid {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+}
