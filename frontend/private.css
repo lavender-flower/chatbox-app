@@ -1,11 +1,8 @@
 body {
   background-color: #f8f9fa; /* Light background for the entire page */
-}
-.poppins-thin {
   font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
+
 .chat-container {
   height: 80vh; /* Set height for chat area */
   display: flex;
