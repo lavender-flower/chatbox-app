@@ -17,6 +17,18 @@ body {
   .t-blue{
     color: #295F98;
   }
+  .homeiconWrapper {
+    position: relative;
+  }
+  .fa-solid {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+  }
+  
  
   .dot {
     height: 15px;
