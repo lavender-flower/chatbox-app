@@ -1,0 +1,58 @@
+body {
+    background-color: #295F98;
+    
+  }
+  .poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+ 
+
+/* CSS */
+.chat-container {
+    background-color: #f0f0f0; /* Background color for the chat container */
+}
+
+.other-name {
+    margin-left: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color:black;
+}
+
+.other-chat {
+    background-color: #f8d7da;
+    padding: 20px;
+    display: flex;
+    align-items: center
+  }
+
+  .my-chat {
+    background-color: #d4edda;
+    padding: 20px;
+    text-align: right; /* Align text to the right */
+    margin-right: 0;
+    
+    
+
+    display: flex;
+    align-items: center
+     /* Set right margin to 0px */
+  }
+/* Text Container Styling */
+.txt-container {
+    background-color: white;
+    padding: 5px 5px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.image img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the image circular */
+}
+
+
