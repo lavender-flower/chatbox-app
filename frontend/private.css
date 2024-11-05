@@ -42,7 +42,7 @@ body {
   flex-grow: 1; /* Allow input to grow */
   margin-right: 10px;
 }
-img {
+#image {
   height: 40px;
   width: 40px;
 }
