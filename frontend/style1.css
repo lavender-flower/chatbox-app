@@ -102,3 +102,120 @@ body {
   font-family: 'Poppins', sans-serif;
   opacity: 0.8; /* Make placeholder fully opaque */
 }
+
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+  }
+  .landingPage-img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .landingPage-img img {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-self: center;
+  }
+  .landingPage-img h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .landingPage-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .lpcustom-btn {
+    width: 15rem;
+    height: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 450;
+    margin: 0.5rem 0 0.5rem 0;
+    color: #295f98;
+  }
+
+  .register-container {
+    height: 38rem;
+    width: 20rem;
+    background: #d9d9d9;
+    padding: 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .register-container h1 {
+    display: flex;
+    justify-content: center;
+    color: #295f98;
+    margin-top: 2rem;
+  }
+  .register-container small {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    margin-bottom: 2rem;
+  }
+  .regCustom-btn {
+    background: #295f98;
+    width: 16rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    margin-top: 1rem;
+  }
+  .register-container a {
+    text-decoration: none;
+  }
+  .reg-smallanc {
+    margin-top: 1rem;
+  }
+  #regBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  .regiconWrapper {
+    position: relative;
+  }
+  .fa-solid {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+  }
+  .reg-passlink {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .form-control::placeholder {
+    color: #888888; /* Change placeholder text color */
+    font-weight: 500; /* Change font weight */
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.8; /* Make placeholder fully opaque */
+  }
+  
+ 
+}
+
+/* For very small screens (max-width 480px, typical mobile devices) */
+@media (max-width: 480px) {
+  body {
+      font-size: 12px;
+  }
+  .p{
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+}
+

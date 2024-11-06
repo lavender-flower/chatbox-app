@@ -14,8 +14,10 @@
 
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="private.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body class="poppins-thin bg-light">
+<body class="poppins-thin bg-light ">
     <nav class="navbar">
         <div class="nav-left-section">
             <img src="image/1.png" alt="Profile" class="nav-profile-pic">
@@ -23,13 +25,13 @@
             
         </div>
         <div class="nav-center-section">
-            <h2>Chatbox</h2>
+            <h2 class="ch">Chatbox</h2>
         </div>
         <div class="nav-right-section">
             <div class="nav-hamburger-menu" onclick="toggleMenu()">
                 &#9776;
             </div>
-            <div class="nav-dropdown-menu" id="nav-dropdown">
+            <div class="nav-dropdown-menu  b" id="nav-dropdown">
                 <a href="#" id="myBtn" onclick="">Create group</a>
                 
            
@@ -107,7 +109,7 @@
       </div>
 </div>
 <div class="text-end">
-    <button onclick="location.href='homePage.html'" type="button" class="groupCustom-btn shadow">create Group</button>
+    <button onclick="location.href='homePage.html'" type="button" class="groupCustom-btn  shadow">create Group</button>
     
 </div>
 
@@ -127,14 +129,15 @@
    
     <div class="  ">
   
-        <div class="row align-items-start">
-            <div class="col-4 home-bg p-5  ">
+        <div class="d-flex align-items-start">
+            <div class=" home-bg p-5  ">
               <h4 class="t-blue">Chats</h4>
               
               <div class="homeiconWrapper">
                 <input
+
                   type="text"
-                  class="form-control shadow"
+                  class="form-control shadow "
                   id="exampleFormControlInput4"
                   placeholder="Search"
                   
@@ -144,83 +147,60 @@
               <div class="pt-4">
 
                
-                <div class="d-flex pt-1  mt-4  border">
+                <div onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');" class="d-flex justify-content-between pointer pt-1  mt-4">
+                  <div class="d-flex">
                     <div >
-                        <img src="./image/2.png" width="70px">
+                      <img src="./image/2.png" width="70px">
 
-                    </div>
-                    <div class=" pt-2 ps-3">
-                        <h6 onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');">Mrs Allen</h6>
-                        
-                        <small>What's up!</small>
+                  </div>
+                  <div class=" pt-2 p-1">
+                      <h6 >Mrs Allen</h6>
+                      
+                      <small>What's up!</small>
 
-                    </div>
+                  </div>
+                  </div>
                     <div class="pt-3 ps-5">
                         <span class="dot"></span>
                     </div>
 
                 </div>
                
-                <div class="d-flex pt-1 mt-4 border">
-                    <div >
-                        <img src="./image/3.png" width="70px">
+              
 
-                    </div>
-                    <div class=" pt-2 ps-3">
-                        <h6>Alice</h6>
-                        
-                        <small>What's up!</small>
+          
+               
+                <div onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" class="d-flex justify-content-between pointer pt-1 mt-4 ">
+                  <div class="d-flex">
+                    <div>
+                      <img src="./image/1.png" width="70px">
 
-                    </div>
+                  </div>
+                  <div class=" pt-2 ps-3">
+                      <h6  >lCT Group</h6>
+                      
+                      <small>What's up!</small>
+
+                  </div>
+                  </div>
                     <div class="pt-3 ps-5">
                         <span class="dot"></span>
                     </div>
 
                 </div>
-
-                <div class="d-flex pt-2 mt-4 border ">
-                    <div>
-                        <img src="./image/2.png" width="70px">
-
-                    </div>
-                    <div class=" pt-2 ps-3">
-                        <h6>Emma</h6>
-                        
-                        <small>What's up!</small>
-
-                    </div>
-                    <div class="pt-3 ps-5 taxt-aline='rigth'">
-                        <span class="dot"></span>
-                    </div>
+                <div class="d-flex  justify-content-between pt-1 mt-4  pointer">
+                 <div class="d-flex">
+                  <div>
+                    <img src="./image/7.png" width="70px" class="rounded-circle">
 
                 </div>
-                <div class="d-flex pt-1 mt-4 border">
-                    <div>
-                        <img src="./image/1.png" width="70px">
-
-                    </div>
-                    <div class=" pt-2 ps-3">
-                        <h6 onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" >lCT Group</h6>
-                        
-                        <small>What's up!</small>
-
-                    </div>
-                    <div class="pt-3 ps-5">
-                        <span class="dot"></span>
-                    </div>
+                <div class=" pt-2 ps-3">
+                    <h6>Tom</h6>
+                    
+                    <small>What's up!</small>
 
                 </div>
-                <div class="d-flex pt-1 mt-4 border">
-                    <div>
-                        <img src="./image/7.png" width="70px" class="rounded-circle">
-
-                    </div>
-                    <div class=" pt-2 ps-3">
-                        <h6>Tom</h6>
-                        
-                        <small>What's up!</small>
-
-                    </div>
+                 </div>
                     <div class="pt-3 ps-5">
                         <span class="dot"></span>
                     </div>
@@ -229,14 +209,14 @@
                 
             </div>
             </div>
-            <div id="home" class="col-8 home-bg-2">
+            <div id="home" class="col-8 ch home-bg-2">
               <div >
                 <img class="p-5 " width="300px" src="./image/4.png"><br>
                 <small class="ps-5">Select a chat to read message</small>
               </div>
             </div>
 
-            <div id="private" class="col-8 home-bg-2" style="display: none;">
+            <div id="private" class="col-8  home-bg-2" style="display: none;">
                 <div >
                   
                     <div class="container mt-5">
@@ -308,7 +288,7 @@
                 </div>
               </div>
 
-              <div id="public" class="col-8 home-bg-2" style="display: none;">
+              <div id="public" class="col-8  home-bg-2" style="display: none;">
                 <div >
                     <div class="container mt-5">
                         <p>LCT Intern</p>
@@ -442,6 +422,8 @@
     <script src="route.js"></script>
 
     <script>
+
+      
         // Get the modal
         var modal = document.getElementById("myModal");
         
