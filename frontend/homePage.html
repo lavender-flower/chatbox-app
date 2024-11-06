@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="private.css" />
 
+    <style>
+   button:hover{
+        background-color: #1a3c61;
+      }
+
+      .bg:hover{
+        background-color: #a7b0b8;
+      }
+      </style>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body class="poppins-thin bg-light ">
@@ -25,7 +35,13 @@
             
         </div>
         <div class="nav-center-section">
-            <h2 class="ch">Chatbox</h2>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h3 class="animate-charcter"> Chatbox</h3>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="nav-right-section">
             <div class="nav-hamburger-menu" onclick="toggleMenu()">
@@ -59,7 +75,7 @@
 <div>
 
     
-    <div class="d-flex justify-content-between pt-1 mt-4 border">
+    <div class="d-flex justify-content-between pt-1 mt-4 pointer border">
         <div class="d-flex">
          <div class="ps-2" >
              <img src="./image/6.png" width="70px">
@@ -75,7 +91,7 @@
          </div>
 
      </div>
-     <div class="d-flex justify-content-between pt-1 mt-4 border">
+     <div class="d-flex justify-content-between pt-1 mt-4 pointer border">
          <div class="d-flex">
           <div class="ps-2" >
               <img src="./image/3.png" width="70px">
@@ -91,7 +107,7 @@
           </div>
 
       </div>
-      <div class="d-flex justify-content-between pt-1 mt-4 border">
+      <div class="d-flex justify-content-between pt-1 mt-4 pointer border">
          <div class="d-flex">
           <div class="ps-2" >
               <img src="./image/2.png" width="70px">
@@ -147,7 +163,7 @@
               <div class="pt-4">
 
                
-                <div onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');" class="d-flex justify-content-between pointer pt-1  mt-4">
+                <div onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');" class="d-flex justify-content-between pointer p-3 chat bg  mt-4">
                   <div class="d-flex">
                     <div >
                       <img src="./image/2.png" width="70px">
@@ -160,7 +176,7 @@
 
                   </div>
                   </div>
-                    <div class="pt-3 ps-5">
+                    <div class=" p-3">
                         <span class="dot"></span>
                     </div>
 
@@ -170,7 +186,7 @@
 
           
                
-                <div  onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" class="d-flex justify-content-between pointer pt-1 mt-4 ">
+                <div  onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" class="d-flex justify-content-between pointer p-3 chat bg  ">
                   <div class="d-flex">
                     <div>
                       <img src="./image/1.png" width="70px">
@@ -183,29 +199,34 @@
 
                   </div>
                   </div>
-                    <div class="pt-3 ps-5">
+                    <div class="p-3">
                         <span class="dot"></span>
                     </div>
 
                 </div>
-                <div class="d-flex  justify-content-between pt-1 mt-4  pointer">
-                 <div class="d-flex">
-                  <div>
-                    <img src="./image/7.png" width="70px" class="rounded-circle">
 
-                </div>
-                <div class=" pt-2 ps-3">
-                    <h6>Tom</h6>
-                    
-                    <small>What's up!</small>
 
-                </div>
-                 </div>
-                    <div class="pt-3 ps-5">
+                  
+                <div onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');" class="d-flex justify-content-between pointer p-3 chat bg ">
+                  <div class="d-flex">
+                    <div >
+
+                      <img src="./image/7.png" width="70px">
+
+                  </div>
+                  <div class=" pt-2 p-1">
+                      <h6 >Tom</h6>
+                      
+                      <small>What's up!</small>
+
+                  </div>
+                  </div>
+                    <div class=" p-3">
                         <span class="dot"></span>
                     </div>
 
                 </div>
+              
                 
             </div>
             </div>
