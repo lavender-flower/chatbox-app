@@ -4,9 +4,10 @@ body {
     
   }
 
-  .container {
-    width: 80%;  /* 80% of the parent element */
+  .container-1 {
+    width: 65vw; /* 80% of the parent element */
     padding: 1em;  /* Padding relative to the font size */
+
 }
   .poppins-thin {
     font-family: "Poppins", sans-serif;
@@ -106,6 +107,8 @@ body {
       z-index: 10;
 
     }
+   
+ 
     .groupCustom-btn {
       background: #295f98;
       width: 15rem;
@@ -115,6 +118,9 @@ body {
       color: #fff;
       margin-top: 1rem;
     }
+    .hide-div {
+      display: none;
+  }
 }
 
 /* For very small screens (max-width 480px, typical mobile devices) */
@@ -124,6 +130,7 @@ body {
     }
     .ch{
       display: none;
+      
     }
     .groupCustom-btn {
       background: #295f98;
@@ -134,4 +141,37 @@ body {
       color: #fff;
       margin-top: 1rem;
     }
+    .hide-div {
+      display: none;
+  }
 }
+
+.animate-charcter
+{
+  
+  background-image: linear-gradient(
+    -225deg,
+    #295f98 0%,
+    #5c75c7 29%,
+    #f3eef0 67%,
+    #838380 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+

@@ -137,6 +137,14 @@ body {
     color: #295f98;
   }
 
+  
+    a:hover {
+      color: yellow;
+      font-size: 18px;
+    }
+  
+  
+
   .register-container {
     height: 38rem;
     width: 20rem;
@@ -168,7 +176,10 @@ body {
     border-radius: 8px;
     color: #fff;
     margin-top: 1rem;
+   
+    cursor: pointer;
   }
+
   .register-container a {
     text-decoration: none;
   }
@@ -218,4 +229,35 @@ body {
   }
 
 }
+.animate-charcter
+{
+  
+  background-image: linear-gradient(
+    -225deg,
+    #295f98 0%,
+    #5c75c7 29%,
+    #f3eef0 67%,
+    #838380 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 40px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+
 
