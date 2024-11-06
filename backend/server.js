@@ -56,11 +56,11 @@ app.get('/login.html', (req, res) => {
 })
 
 // Serve the homepage
-app.get('/homepage.html', (req, res) => {
+app.get('/homePage.html', (req, res) => {
   if (!req.session.user) {
     return res.redirect('/login.html')
   }
-  res.sendFile(path.join(__dirname, '../frontend', 'homepage.html'))
+  res.sendFile(path.join(__dirname, '../frontend', 'homePage.html'))
 })
 
 // Registration logic
@@ -150,7 +150,7 @@ app.post('/login', (req, res) => {
           req.session.otherUsers = otherUsers
 
           // Redirect to homepage after successful login
-          res.redirect('/homepage.html')
+          res.redirect('/homePage.html')
         }
       )
     }
