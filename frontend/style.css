@@ -4,9 +4,10 @@ body {
     
   }
 
-  .container {
-    width: 80%;  /* 80% of the parent element */
+  .container-1 {
+    width: 70vw; /* 80% of the parent element */
     padding: 1em;  /* Padding relative to the font size */
+
 }
   .poppins-thin {
     font-family: "Poppins", sans-serif;
@@ -17,6 +18,7 @@ body {
   .home-bg{
     background-color: #d9d9d9;
     height: 100vh;
+    
     
    
 
@@ -106,6 +108,8 @@ body {
       z-index: 10;
 
     }
+   
+ 
     .groupCustom-btn {
       background: #295f98;
       width: 15rem;
@@ -115,6 +119,9 @@ body {
       color: #fff;
       margin-top: 1rem;
     }
+    .hide-div {
+      display: none;
+  }
 }
 
 /* For very small screens (max-width 480px, typical mobile devices) */
@@ -124,6 +131,7 @@ body {
     }
     .ch{
       display: none;
+      
     }
     .groupCustom-btn {
       background: #295f98;
@@ -134,4 +142,7 @@ body {
       color: #fff;
       margin-top: 1rem;
     }
+    .hide-div {
+      display: none;
+  }
 }

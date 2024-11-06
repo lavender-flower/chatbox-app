@@ -130,7 +130,7 @@
     <div class="  ">
   
         <div class="d-flex align-items-start">
-            <div class=" home-bg p-5  ">
+            <div class="clickable-div home-bg p-5  ">
               <h4 class="t-blue">Chats</h4>
               
               <div class="homeiconWrapper">
@@ -170,7 +170,7 @@
 
           
                
-                <div onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" class="d-flex justify-content-between pointer pt-1 mt-4 ">
+                <div  onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" class="d-flex justify-content-between pointer pt-1 mt-4 ">
                   <div class="d-flex">
                     <div>
                       <img src="./image/1.png" width="70px">
@@ -209,7 +209,7 @@
                 
             </div>
             </div>
-            <div id="home" class="col-8 ch home-bg-2">
+            <div id="home" class="col-8 wid ch home-bg-2">
               <div >
                 <img class="p-5 " width="300px" src="./image/4.png"><br>
                 <small class="ps-5">Select a chat to read message</small>
@@ -219,7 +219,7 @@
             <div id="private" class="col-8  home-bg-2" style="display: none;">
                 <div >
                   
-                    <div class="container mt-5">
+                    <div class="container-1  mt-5">
                         <p>Mrs Allen</p>
                         <div class="chat-container">
                           <div class="messages">
@@ -290,7 +290,7 @@
 
               <div id="public" class="col-8  home-bg-2" style="display: none;">
                 <div >
-                    <div class="container mt-5">
+                    <div class="container-1 mt-5">
                         <p>LCT Intern</p>
                         <div class="chat-container">
                           <div class="messages">
@@ -422,6 +422,14 @@
     <script src="route.js"></script>
 
     <script>
+
+
+document.querySelector('.clickable-div').addEventListener('click', function() {
+    if (window.innerWidth <= 768) {  // Check if the screen size is mobile
+        this.classList.add('hide-div'); // Add 'hide-div' class to hide the div
+    }
+});
+
 
       
         // Get the modal

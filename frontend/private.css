@@ -7,6 +7,7 @@ body {
   height: 80vh; /* Set height for chat area */
   display: flex;
   flex-direction: column;
+  
 
   border-radius: 8px;
   overflow: hidden;
