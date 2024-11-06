@@ -29,36 +29,33 @@
     <div class="register-container">
       <h1>Login</h1>
       <small>Sign in to your account</small>
-      <form>
+      <form action="/login" method="POST">
         <div class="mb-3">
-          <label
-            for="exampleFormControlInput1"
-            class="form-label text-dark fw-medium"
+          <label for="email" class="form-label text-dark fw-medium"
             >Email</label
           >
           <div class="regiconWrapper">
             <input
               type="email"
               class="form-control border border-dark shadow"
-              id="exampleFormControlInput2"
+              id="email"
+              name="email"
               placeholder="Enter your email"
-              onclick="location.href='homePage.html'"
             />
             <i class="fa-solid fa-envelope"></i>
           </div>
         </div>
 
         <div class="mb-3">
-          <label
-            for="exampleFormControlInput1"
-            class="form-label text-dark fw-medium"
+          <label for="password" class="form-label text-dark fw-medium"
             >Password</label
           >
           <div class="regiconWrapper">
             <input
               type="password"
               class="form-control border border-dark shadow"
-              id="exampleFormControlInput1"
+              id="password"
+              name="password"
               placeholder="Enter password"
               required
             />
@@ -70,11 +67,11 @@
             <a href=""> Forgot password?</a></small
           >
         </div>
-        <button type="button" class="regCustom-btn shadow" onclick="location.href='homePage.html'">Login</button>
+        <button type="submit" class="regCustom-btn shadow">Login</button>
       </form>
 
       <small class="reg-smallanc"
-        >New to ChatBox? <a href="registerPage.html" > Sign Up</a></small
+        >New to ChatBox? <a href="registerPage.html"> Sign Up</a></small
       >
     </div>
 

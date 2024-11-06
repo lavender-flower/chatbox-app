@@ -29,7 +29,7 @@
     <div class="register-container">
       <h1>Register</h1>
       <small>Create your account</small>
-      <form>
+      <form action="http://localhost:3000/registerPage" method="POST">
         <div class="mb-3">
           <label
             for="exampleFormControlInput1"
@@ -39,8 +39,9 @@
           <div class="regiconWrapper">
             <input
               type="text"
+              name="username"
               class="form-control border border-dark shadow"
-              id="exampleFormControlInput1"
+              id="username"
               placeholder="Enter username"
             />
             <i class="fa-solid fa-user"></i>
@@ -55,8 +56,9 @@
           <div class="regiconWrapper">
             <input
               type="email"
+              name="email"
               class="form-control border border-dark shadow"
-              id="exampleFormControlInput2"
+              id="email"
               placeholder="Enter your email"
             />
             <i class="fa-solid fa-envelope"></i>
@@ -71,9 +73,10 @@
           <div class="regiconWrapper">
             <input
               type="number"
+              name="phone"
               class="form-control border border-dark shadow"
-              id="exampleFormControlInput4"
-              placeholder="Enter phone"
+              id="phone"
+              placeholder="Enter phone number"
               required
             />
             <i class="fa-solid fa-phone"></i>
@@ -88,8 +91,9 @@
           <div class="regiconWrapper">
             <input
               type="password"
+              name="password"
               class="form-control border border-dark shadow"
-              id="exampleFormControlInput1"
+              id="password"
               placeholder="Enter password"
               required
             />
@@ -97,7 +101,7 @@
           </div>
         </div>
         <button
-          type="button"
+          type="submit"
           class="regCustom-btn shadow"
           onclick="location.href='homePage.html'"
         >
