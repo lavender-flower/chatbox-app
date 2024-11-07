@@ -33,26 +33,38 @@
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="private.css" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body class="poppins-thin bg-light ">
-    <nav class="navbar">
-        <div class="nav-left-section">
-            <img src="image/1.png" alt="Profile" class="nav-profile-pic">
-            <p class="nav-profile-name pt-3">Boby</p>
-            
-        </div>
-        <div class="nav-center-section">
-            <h2 class="ch">Chatbox</h2>
-        </div>
-        <div class="nav-right-section">
-            <div class="nav-hamburger-menu" onclick="toggleMenu()">
-                &#9776;
+    <style>
+      button:hover {
+        background-color: #1a3c61;
+      }
+
+      .bg:hover {
+        background-color: #a7b0b8;
+      }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body class="poppins-thin bg-light" ng-app="myApp">
+    <nav class="navbar" ng-controller="HomeController">
+      <div class="nav-left-section" ng-if="loggedInUser.username">
+        <img src="image/1.png" alt="Profile" class="nav-profile-pic" />
+        <p class="nav-profile-name pt-3">{{ loggedInUser.username }}</p>
+      </div>
+      <div class="nav-center-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h3 class="animate-charcter">Chatbox</h3>
             </div>
-            <div class="nav-dropdown-menu  b" id="nav-dropdown">
-                <a href="#" id="myBtn" onclick="">Create group</a>
-                
-           
+          </div>
+        </div>
+      </div>
+      <div class="nav-right-section">
+        <div class="nav-hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+        <div class="nav-dropdown-menu b" id="nav-dropdown">
+          <a href="#" id="myBtn" onclick="">Create group</a>
 
           <!-- The Modal -->
           <div id="myModal" class="modal">
@@ -62,75 +74,89 @@
                 <span class="close">&times;</span>
               </div>
 
+              <div>
+                <div class="homeiconWrapper">
+                  <input
+                    type="text"
+                    class="form-control shadow"
+                    id="exampleFormControlInput4"
+                    placeholder="Search"
+                  />
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
                 <div>
-                    <div class="homeiconWrapper">
-                        <input
-                          type="text"
-                          class="form-control shadow"
-                          id="exampleFormControlInput4"
-                          placeholder="Search"
-                          
-                        />
-                        <i class="fa-solid fa-magnifying-glass"></i>
+                  <div
+                    class="d-flex justify-content-between pt-1 mt-4 pointer border"
+                  >
+                    <div class="d-flex">
+                      <div class="ps-2">
+                        <img src="./image/6.png" width="70px" />
                       </div>
-<div>
-
-    
-    <div class="d-flex justify-content-between pt-1 mt-4 border">
-        <div class="d-flex">
-         <div class="ps-2" >
-             <img src="./image/6.png" width="70px">
-
-         </div>
-         <div class=" pt-3 ps-3">
-             <h4>Amelia</h4>
-             
-             </div>
-        </div>
-         <div class="pt-3 pe-5">
-             <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" unchecked>
-         </div>
-
-     </div>
-     <div class="d-flex justify-content-between pt-1 mt-4 border">
-         <div class="d-flex">
-          <div class="ps-2" >
-              <img src="./image/3.png" width="70px">
-
-          </div>
-          <div class=" pt-3 ps-3">
-              <h4>Alice</h4>
-              
-              </div>
-         </div>
-          <div class="pt-3 pe-5">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" unchecked>
-          </div>
-
-      </div>
-      <div class="d-flex justify-content-between pt-1 mt-4 border">
-         <div class="d-flex">
-          <div class="ps-2" >
-              <img src="./image/2.png" width="70px">
-
-          </div>
-          <div class=" pt-3 ps-3">
-              <h4>Mrs Allen</h4>
-              
-              </div>
-         </div>
-          <div class="pt-3 pe-5">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" unchecked>
-          </div>
-
-      </div>
-</div>
-<div class="text-end">
-    <button onclick="location.href='homePage.html'" type="button" class="groupCustom-btn  shadow">create Group</button>
-    
-</div>
-
-
+                      <div class="pt-3 ps-3">
+                        <h4>Amelia</h4>
+                      </div>
+                    </div>
+                    <div class="pt-3 pe-5">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                        unchecked
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between pt-1 mt-4 pointer border"
+                  >
+                    <div class="d-flex">
+                      <div class="ps-2">
+                        <img src="./image/3.png" width="70px" />
+                      </div>
+                      <div class="pt-3 ps-3">
+                        <h4>Alice</h4>
+                      </div>
+                    </div>
+                    <div class="pt-3 pe-5">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                        unchecked
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between pt-1 mt-4 pointer border"
+                  >
+                    <div class="d-flex">
+                      <div class="ps-2">
+                        <img src="./image/2.png" width="70px" />
+                      </div>
+                      <div class="pt-3 ps-3">
+                        <h4>Mrs Allen</h4>
+                      </div>
+                    </div>
+                    <div class="pt-3 pe-5">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckChecked"
+                        unchecked
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="text-end">
+                  <button
+                    onclick="location.href='homePage.html'"
+                    type="button"
+                    class="groupCustom-btn shadow"
+                  >
+                    create Group
+                  </button>
                 </div>
               </div>
             </div>
@@ -143,324 +169,375 @@
     </nav>
 
     <div class="  ">
-  
-        <div class="d-flex align-items-start">
-            <div class=" home-bg p-5  ">
-              <h4 class="t-blue">Chats</h4>
-              
-              <div class="homeiconWrapper">
-                <input
+      <div class="d-flex align-items-start">
+        <div class="clickable-div home-bg p-5">
+          <h4 class="t-blue">Chats</h4>
 
-                  type="text"
-                  class="form-control shadow "
-                  id="exampleFormControlInput4"
-                  placeholder="Search"
-                  
-                />
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
-              <div class="pt-4">
-
-               
-                <div onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');" class="d-flex justify-content-between pointer pt-1  mt-4">
-                  <div class="d-flex">
-                    <div >
-                      <img src="./image/2.png" width="70px">
-
-                  </div>
-                  <div class="pt-2 p-1">
-                    <h6>{{user.username}}</h6>
-
-                    <small>What's up!</small>
-                  </div>
-                    <div class="pt-3 ps-5">
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-               
-              
-
-          
-               
-                <div onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');" class="d-flex justify-content-between pointer pt-1 mt-4 ">
-                  <div class="d-flex">
-                    <div>
-                      <img src="./image/1.png" width="70px">
-
-                  </div>
-                  <div class=" pt-2 ps-3">
-                      <h6  >lCT Group</h6>
-                      
-                      <small>What's up!</small>
-
-                  </div>
-                  </div>
-                    <div class="pt-3 ps-5">
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-                <div class="d-flex  justify-content-between pt-1 mt-4  pointer">
-                 <div class="d-flex">
-                  <div>
-                    <img src="./image/7.png" width="70px" class="rounded-circle">
-
-                </div>
-                <div class=" pt-2 ps-3">
-                    <h6>Tom</h6>
-                    
-                    <small>What's up!</small>
-
-                </div>
-                 </div>
-                    <div class="pt-3 ps-5">
-                        <span class="dot"></span>
-                    </div>
-
-                </div>
-                
-            </div>
-            </div>
-            <div id="home" class="col-8 ch home-bg-2">
-              <div >
-                <img class="p-5 " width="300px" src="./image/4.png"><br>
-                <small class="ps-5">Select a chat to read message</small>
-              </div>
-            </div>
-
-            <div id="private" class="col-8  home-bg-2" style="display: none;">
-                <div >
-                  
-                    <div class="container mt-5">
-                        <p>Mrs Allen</p>
-                        <div class="chat-container">
-                          <div class="messages">
-                            <!-- Other user's message -->
-                            <div class="d-flex">
-                              <div class="image me-2">
-                                <img
-                                  src="image/2.png"
-                                  alt="User Image"
-                                  width="40"
-                                  class="img-fluid rounded-circle"
-                                  id="image"
-                                />
-                              </div>
-                              <div class="other-message">Hey, how are you?</div>
-                            </div>
-                            <!-- My message -->
-                            <div class="d-flex justify-content-end">
-                              <div class="my-message">I'm good, thanks! How about you?</div>
-                              <div class="image ms-2">
-                                <img
-                                  src="image/1.png"
-                                  alt="My Image"
-                                  class="img-fluid rounded-circle"
-                                  id="image"
-                                />
-                              </div>
-                            </div>
-                            <!-- Other user's message -->
-                            <div class="d-flex">
-                              <div class="image me-2">
-                                <img
-                                  src="image/2.png"
-                                  alt="User Image"
-                                  class="img-fluid rounded-circle"
-                                  id="image"
-                                />
-                              </div>
-                              <div class="other-message">Just working on some projects.</div>
-                            </div>
-                            <!-- My message -->
-                            <div class="d-flex justify-content-end">
-                              <div class="my-message">Sounds great!</div>
-                              <div class="image ms-2">
-                                <img
-                                  src="image/1.png"
-                                  alt="My Image"
-                                  class="img-fluid rounded-circle"
-                                  id="image"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="input-area d-flex">
-                            <input
-                              type="text"
-                              placeholder="Type your message..."
-                              aria-label="Message input"
-                            />
-                            <button class="btn btn-primary" type="button">
-                              <i class="fas fa-paper-plane"></i>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                </div>
-              </div>
-
-              <div id="public" class="col-8  home-bg-2" style="display: none;">
-                <div >
-                    <div class="container mt-5">
-                        <p>LCT Intern</p>
-                        <div class="chat-container">
-                          <div class="messages">
-                            <!-- Other user's message -->
-                            <div class="d-flex flex-column mb-2">
-                              <span class="fw-light ps-5">Mrs Allen</span>
-                  
-                              <div class="d-flex">
-                                <div class="image me-2">
-                                  <img
-                                    src="image/2.png"
-                                    alt="User Image"
-                                    class="img-fluid rounded-circle"
-                                    id="image"
-                                  />
-                                </div>
-                                <div class="other-message">Hey, how are you?</div>
-                              </div>
-                            </div>
-                  
-                            <div class="d-flex flex-column mb-2">
-                              <span class="fw-light ps-5">Alice</span>
-                  
-                              <div class="d-flex">
-                                <div class="image me-2">
-                                  <img
-                                    src="image/3.png"
-                                    alt="User Image"
-                                    class="img-fluid rounded-circle"
-                                    id="image"
-                                  />
-                                </div>
-                                <div class="other-message">Hey, how are you?</div>
-                              </div>
-                            </div>
-                  
-                            <div class="d-flex flex-column mb-2">
-                              <span class="fw-light ps-5">Mrs Allen</span>
-                  
-                              <div class="d-flex">
-                                <div class="image me-2">
-                                  <img
-                                    src="image/2.png"
-                                    alt="User Image"
-                                    class="img-fluid rounded-circle"
-                                    id="image"
-                                  />
-                                </div>
-                                <div class="other-message">Just working on some projects.</div>
-                              </div>
-                            </div>
-                            <!-- My message -->
-                            <div class="d-flex justify-content-end mb-2">
-                              <div class="my-message">I'm good, thanks! How about you?</div>
-                              <div class="image ms-2">
-                                <img
-                                  src="image/1.png"
-                                  alt="My Image"
-                                  class="img-fluid rounded-circle"
-                                  id="image"
-                                />
-                              </div>
-                            </div>
-                            <!-- Other user's message -->
-                            <div class="d-flex flex-column mb-2">
-                              <span class="fw-light ps-5">Mrs Allen</span>
-                  
-                              <div class="d-flex">
-                                <div class="image me-2">
-                                  <img
-                                    src="image/2.png"
-                                    alt="User Image"
-                                    class="img-fluid rounded-circle"
-                                    id="image"
-                                  />
-                                </div>
-                                <div class="other-message">Just working on some projects.</div>
-                              </div>
-                            </div>
-                  
-                            <div class="d-flex flex-column mb-2">
-                              <span class="fw-light ps-5">Mrs Allen</span>
-                  
-                              <div class="d-flex">
-                                <div class="image me-2">
-                                  <img
-                                    src="image/2.png"
-                                    alt="User Image"
-                                    class="img-fluid rounded-circle"
-                                    id="image"
-                                  />
-                                </div>
-                                <div class="other-message">Hey, how are you?</div>
-                              </div>
-                            </div>
-                  
-                            <div class="d-flex justify-content-end mb-2">
-                              <div class="my-message">Sounds great!</div>
-                              <div class="image ms-2">
-                                <img
-                                  src="image/1.png"
-                                  alt="My Image"
-                                  class="img-fluid rounded-circle"
-                                  id="image"
-                                />
-                              </div>
-                            </div>
-                          </div>
-                          <div class="input-area d-flex">
-                            <input
-                              type="text"
-                              placeholder="Type your message..."
-                              aria-label="Message input"
-                            />
-                            <button class="btn btn-primary" type="button">
-                              <i class="fas fa-paper-plane"></i>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                  
-                </div>
-              </div>
-          
+          <div class="homeiconWrapper">
+            <input
+              type="text"
+              class="form-control shadow"
+              id="exampleFormControlInput4"
+              placeholder="Search"
+            />
+            <i class="fa-solid fa-magnifying-glass"></i>
           </div>
+          <div class="pt-4" ng-controller="HomeController">
+            <div
+              onclick="toggleDivs('private', 'home'); toggleDivs('private', 'public');"
+              class="justify-content-between pointer p-3 chat bg mt-4"
+              ng-repeat="user in loggedInOtherUser"
+            >
+              <div class="d-flex">
+                <div>
+                  <img src="./image/2.png" width="70px" />
+                </div>
+                <div class="pt-2 p-1">
+                  <h6>{{ user.username }}</h6>
+
+                  <small>What's up!</small>
+                </div>
+                <div class="p-3">
+                  <span class="dot"></span>
+                </div>
+              </div>
+            </div>
+
+            <div
+              onclick="toggleDivs('public', 'home'); toggleDivs('public', 'private');"
+              class="d-flex justify-content-between pointer p-3 chat bg"
+            >
+              <div class="d-flex">
+                <div>
+                  <img src="./image/1.png" width="70px" />
+                </div>
+                <div class="pt-2 ps-3">
+                  <h6>lCT Group</h6>
+
+                  <small>What's up!</small>
+                </div>
+              </div>
+              <div class="p-3">
+                <span class="dot"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="home" class="col-8 wid ch home-bg-2">
+          <div>
+            <img class="p-5" width="300px" src="./image/4.png" /><br />
+            <small class="ps-5">Select a chat to read message</small>
+          </div>
+        </div>
+
+        <div id="private" class="col-8 home-bg-2" style="display: none">
+          <div>
+            <div class="container-1 mt-5">
+              <p>Mrs Allen</p>
+              <div class="chat-container">
+                <div class="messages">
+                  <!-- Other user's message -->
+                  <div class="d-flex">
+                    <div class="image me-2">
+                      <img
+                        src="image/2.png"
+                        alt="User Image"
+                        width="40"
+                        class="img-fluid rounded-circle"
+                        id="image"
+                      />
+                    </div>
+                    <div class="other-message">Hey, how are you?</div>
+                  </div>
+                  <!-- My message -->
+                  <div class="d-flex justify-content-end">
+                    <div class="my-message">
+                      I'm good, thanks! How about you?
+                    </div>
+                    <div class="image ms-2">
+                      <img
+                        src="image/1.png"
+                        alt="My Image"
+                        class="img-fluid rounded-circle"
+                        id="image"
+                      />
+                    </div>
+                  </div>
+                  <!-- Other user's message -->
+                  <div class="d-flex">
+                    <div class="image me-2">
+                      <img
+                        src="image/2.png"
+                        alt="User Image"
+                        class="img-fluid rounded-circle"
+                        id="image"
+                      />
+                    </div>
+                    <div class="other-message">
+                      Just working on some projects.
+                    </div>
+                  </div>
+                  <!-- My message -->
+                  <div class="d-flex justify-content-end">
+                    <div class="my-message">Sounds great!</div>
+                    <div class="image ms-2">
+                      <img
+                        src="image/1.png"
+                        alt="My Image"
+                        class="img-fluid rounded-circle"
+                        id="image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="input-area d-flex">
+                  <input
+                    type="text"
+                    placeholder="Type your message..."
+                    aria-label="Message input"
+                  />
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="public" class="col-8 home-bg-2" style="display: none">
+          <div>
+            <div class="container-1 mt-5">
+              <p>LCT Intern</p>
+              <div class="chat-container">
+                <div class="messages">
+                  <!-- Other user's message -->
+                  <div class="d-flex flex-column mb-2">
+                    <span class="fw-light ps-5">Mrs Allen</span>
+
+                    <div class="d-flex">
+                      <div class="image me-2">
+                        <img
+                          src="image/2.png"
+                          alt="User Image"
+                          class="img-fluid rounded-circle"
+                          id="image"
+                        />
+                      </div>
+                      <div class="other-message">Hey, how are you?</div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-column mb-2">
+                    <span class="fw-light ps-5">Alice</span>
+
+                    <div class="d-flex">
+                      <div class="image me-2">
+                        <img
+                          src="image/3.png"
+                          alt="User Image"
+                          class="img-fluid rounded-circle"
+                          id="image"
+                        />
+                      </div>
+                      <div class="other-message">Hey, how are you?</div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-column mb-2">
+                    <span class="fw-light ps-5">Mrs Allen</span>
+
+                    <div class="d-flex">
+                      <div class="image me-2">
+                        <img
+                          src="image/2.png"
+                          alt="User Image"
+                          class="img-fluid rounded-circle"
+                          id="image"
+                        />
+                      </div>
+                      <div class="other-message">
+                        Just working on some projects.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- My message -->
+                  <div class="d-flex justify-content-end mb-2">
+                    <div class="my-message">
+                      I'm good, thanks! How about you?
+                    </div>
+                    <div class="image ms-2">
+                      <img
+                        src="image/1.png"
+                        alt="My Image"
+                        class="img-fluid rounded-circle"
+                        id="image"
+                      />
+                    </div>
+                  </div>
+                  <!-- Other user's message -->
+                  <div class="d-flex flex-column mb-2">
+                    <span class="fw-light ps-5">Mrs Allen</span>
+
+                    <div class="d-flex">
+                      <div class="image me-2">
+                        <img
+                          src="image/2.png"
+                          alt="User Image"
+                          class="img-fluid rounded-circle"
+                          id="image"
+                        />
+                      </div>
+                      <div class="other-message">
+                        Just working on some projects.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-column mb-2">
+                    <span class="fw-light ps-5">Mrs Allen</span>
+
+                    <div class="d-flex">
+                      <div class="image me-2">
+                        <img
+                          src="image/2.png"
+                          alt="User Image"
+                          class="img-fluid rounded-circle"
+                          id="image"
+                        />
+                      </div>
+                      <div class="other-message">Hey, how are you?</div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-end mb-2">
+                    <div class="my-message">Sounds great!</div>
+                    <div class="image ms-2">
+                      <img
+                        src="image/1.png"
+                        alt="My Image"
+                        class="img-fluid rounded-circle"
+                        id="image"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="input-area d-flex">
+                  <input
+                    type="text"
+                    placeholder="Type your message..."
+                    aria-label="Message input"
+                  />
+                  <button class="btn btn-primary" type="button">
+                    <i class="fas fa-paper-plane"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="navbar.js"></script>
     <script src="route.js"></script>
     <script>
+      angular.module('myApp', []).controller('HomeController', [
+        '$scope',
+        '$http',
+        function ($scope, $http) {
+          // Initialize the logged-in user object
+          $scope.loggedInUser = {}
 
-      
-        // Get the modal
-        var modal = document.getElementById("myModal");
-        
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-        
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        
-        // When the user clicks the button, open the modal 
-        btn.onclick = function() {
-          modal.style.display = "block";
-        }
-        
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function(event) {
-          if (event.target == modal) {
-            modal.style.display = "none";
+          // Function to fetch user data
+          $scope.fetchUserData = function () {
+            $http.get('http://localhost:3000/api/user').then(
+              function (response) {
+                console.log(response)
+                $scope.loggedInUser = response.data.user
+
+                $scope.loggedInOtherUser = response.data.otherUsers
+                console.log('Logged-in User Data:', $scope.loggedInOtherUser)
+              },
+              function (error) {
+                console.error('Error fetching user data:', error)
+              }
+            )
           }
+
+          // Call fetchUserData when the controller is initialized
+          $scope.fetchUserData()
+
+          // Handling the click event on mobile screens to hide the div
+          document
+            .querySelector('.clickable-div')
+            .addEventListener('click', function () {
+              if (window.innerWidth <= 768) {
+                // Check if the screen size is mobile
+                this.classList.add('hide-div') // Add 'hide-div' class to hide the div
+              }
+            })
+
+          // Modal functionality
+          var modal = document.getElementById('myModal')
+          var btn = document.getElementById('myBtn')
+          var span = document.getElementsByClassName('close')[0]
+
+          // When the user clicks the button, open the modal
+          btn.onclick = function () {
+            modal.style.display = 'block'
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = 'none'
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = 'none'
+            }
+          }
+        },
+      ])
+    </script>
+
+    <script>
+      document
+        .querySelector('.clickable-div')
+        .addEventListener('click', function () {
+          if (window.innerWidth <= 768) {
+            // Check if the screen size is mobile
+            this.classList.add('hide-div') // Add 'hide-div' class to hide the div
+          }
+        })
+
+      // Get the modal
+      var modal = document.getElementById('myModal')
+
+      // Get the button that opens the modal
+      var btn = document.getElementById('myBtn')
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName('close')[0]
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = 'block'
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = 'none'
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = 'none'
         }
-        </script>
-</body>
+      }
+    </script>
+  </body>
 </html>

@@ -64,7 +64,7 @@ app.get('/homePage.html', (req, res) => {
 })
 
 // Registration logic
-app.post('/register', async (req, res) => {
+app.post('/registerPage', async (req, res) => {
   const { email, password, username, phone } = req.body
 
   // Check if the email already exists
